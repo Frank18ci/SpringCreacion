@@ -1,0 +1,36 @@
+package com.prueba.Prueba2.model;
+
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+
+@Entity
+public class Equipo {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String equipo;
+	@OneToOne(targetEntity = Jefe.class, cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "id_jefe")
+	private Jefe jefe;
+	public Equipo() {
+		// TODO Auto-generated constructor stub
+	}
+	public String getEquipo() {
+		return equipo;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setEquipo(String equipo) {
+		this.equipo = equipo;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+}

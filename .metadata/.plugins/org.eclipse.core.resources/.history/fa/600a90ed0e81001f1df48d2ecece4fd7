@@ -1,0 +1,8 @@
+spring.application.name=Prueba1
+
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/db_consultorio
+spring.datasource.username==root
+spring.datasource.password==sql
+spring.jpa.hibernate.ddl-auto=none
+

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<table>
+			<th:block th:each="p : ${lstPacientes}">
+				<tr>
+					<td th:text="${p.nombre}"></td>
+					<td th:text="${p.apellido}"></td>
+				</tr>
+			</th>
+		</table>
+	</body>
+</html>

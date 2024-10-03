@@ -1,0 +1,8 @@
+package com.prueba.Prueba2.model;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Jefe extends Persona{
+	private Double sueldo;
+}
